@@ -1,73 +1,290 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KZBeats</title>
-<link rel="stylesheet" href="style.css">
+<title>KZ Beats</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#06040b;
+color:white;
+overflow-x:hidden;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(5,0,15,.72),rgba(5,0,15,.82)),
+url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+padding:60px;
+position:relative;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:radial-gradient(circle,#a855f733 0%,transparent 60%);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:650px;
+}
+
+.logo{
+font-size:110px;
+font-weight:700;
+line-height:0.9;
+color:#d8b4fe;
+text-shadow:0 0 18px #c084fc,0 0 45px #9333ea;
+}
+
+.logo span{
+display:block;
+font-size:48px;
+letter-spacing:12px;
+margin-top:18px;
+}
+
+.tagline{
+margin-top:35px;
+font-size:22px;
+line-height:1.7;
+opacity:.9;
+}
+
+.button{
+display:inline-block;
+margin-top:35px;
+padding:18px 34px;
+border-radius:14px;
+background:linear-gradient(90deg,#9333ea,#c084fc);
+color:white;
+text-decoration:none;
+font-weight:700;
+box-shadow:0 0 30px rgba(168,85,247,.5);
+}
+
+.section-title{
+text-align:center;
+padding:60px 20px 30px;
+font-size:42px;
+letter-spacing:8px;
+color:#e9d5ff;
+text-shadow:0 0 14px #9333ea;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+padding:40px;
+max-width:1400px;
+margin:auto;
+}
+
+.card{
+background:#11091c;
+border:1px solid rgba(192,132,252,.18);
+border-radius:24px;
+overflow:hidden;
+transition:.35s ease;
+box-shadow:0 0 25px rgba(0,0,0,.4);
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 35px rgba(168,85,247,.35);
+}
+
+.cover{
+height:260px;
+background-size:cover;
+background-position:center;
+position:relative;
+}
+
+.overlay{
+position:absolute;
+inset:0;
+background:linear-gradient(transparent,rgba(0,0,0,.75));
+display:flex;
+align-items:flex-end;
+padding:22px;
+font-size:40px;
+font-weight:600;
+color:#f5d0fe;
+text-shadow:0 0 14px #9333ea;
+}
+
+.info{
+padding:24px;
+}
+
+audio{
+width:100%;
+margin-top:15px;
+}
+
+.footer{
+margin:70px 20px 40px;
+padding:40px;
+border-radius:24px;
+background:#12081f;
+border:1px solid rgba(192,132,252,.15);
+text-align:center;
+}
+
+.footer h2{
+font-size:38px;
+margin-bottom:14px;
+color:#e9d5ff;
+}
+
+.socials{
+margin-top:25px;
+font-size:14px;
+opacity:.7;
+}
+
+@media(max-width:768px){
+.hero{
+padding:30px;
+}
+
+.logo{
+font-size:72px;
+}
+
+.logo span{
+font-size:30px;
+}
+
+.tagline{
+font-size:18px;
+}
+
+.section-title{
+font-size:30px;
+}
+}
+</style>
 </head>
+
 <body>
 
-<div class="bg"></div>
-
-<header>
-<div class="logo">KZB</div>
-<nav>
-<a href="#beats">Beats</a>
-<a href="#licenses">Licenses</a>
-<a href="#contact">Contact</a>
-</nav>
-</header>
-
 <section class="hero">
-<h1>KingZaavi Beats</h1>
-<p>Cinematic sound for artists and storytellers.</p>
-<button>Enter The Sound</button>
-</section>
+<div class="hero-content">
+<div class="logo">KZ<span>BEATS</span></div>
 
-<section id="beats" class="section">
-<h2>Featured Beats</h2>
-
-<div class="card">
-<h3>Midnight Echo</h3>
-<p>Dark Trap • 145 BPM</p>
-<audio controls></audio>
-<button>Purchase</button>
+<div class="tagline">
+LOFI. EMOTIONS. VIBES.
+<br><br>
+Cinematic soundscapes for your next masterpiece.
 </div>
 
-<div class="card">
-<h3>Neon Rain</h3>
-<p>LOFI Cinematic • 132 BPM</p>
-<audio controls></audio>
-<button>Purchase</button>
+<a class="button" href="#beats">LISTEN TO BEATS</a>
 </div>
 </section>
 
-<section id="licenses" class="section">
-<h2>Licenses</h2>
+<h1 class="section-title" id="beats">NEW BEATS</h1>
 
 <div class="grid">
+
 <div class="card">
-<h3>Basic</h3>
-<p>$29</p>
+<div class="cover" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop');">
+<div class="overlay">Tuesday</div>
+</div>
+<div class="info">
+<audio controls>
+<source src="beats/tuesday-.mp3" type="audio/mpeg">
+</audio>
+</div>
 </div>
 
 <div class="card">
-<h3>Premium</h3>
-<p>$79</p>
+<div class="cover" style="background-image:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop');">
+<div class="overlay">Hideaway</div>
+</div>
+<div class="info">
+<audio controls>
+<source src="beats/Hideaway-.mp3" type="audio/mpeg">
+</audio>
+</div>
 </div>
 
 <div class="card">
-<h3>Unlimited</h3>
-<p>$199</p>
+<div class="cover" style="background-image:url('https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=1200&auto=format&fit=crop');">
+<div class="overlay">This Life</div>
+</div>
+<div class="info">
+<audio controls>
+<source src="beats/this-life.mp3" type="audio/mpeg">
+</audio>
 </div>
 </div>
-</section>
 
-<footer id="contact">
-<p>© 2026 KZBeats</p>
-</footer>
+<div class="card">
+<div class="cover" style="background-image:url('https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=1200&auto=format&fit=crop');">
+<div class="overlay">Demon Slayer</div>
+</div>
+<div class="info">
+<audio controls>
+<source src="beats/demon-slayer.mp3" type="audio/mpeg">
+</audio>
+</div>
+</div>
+
+<div class="card">
+<div class="cover" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200&auto=format&fit=crop');">
+<div class="overlay">Concrete Rhyme</div>
+</div>
+<div class="info">
+<audio controls>
+<source src="beats/concrete-rhyme.mp3" type="audio/mpeg">
+</audio>
+</div>
+</div>
+
+<div class="card">
+<div class="cover" style="background-image:url('https://images.unsplash.com/photo-1500534623283-312aade485b7?q=80&w=1200&auto=format&fit=crop');">
+<div class="overlay">Halo</div>
+</div>
+<div class="info">
+<audio controls>
+<source src="beats/halo.mp3" type="audio/mpeg">
+</audio>
+</div>
+</div>
+
+</div>
+
+<div class="footer">
+<h2>Need A Custom Beat?</h2>
+<p>Let’s create something unforgettable together.</p>
+
+<div class="socials">
+Instagram • YouTube • Email
+</div>
+</div>
 
 </body>
 </html>
